@@ -56,3 +56,14 @@ body {
 #music-button:hover {
     background-color: #ff1493;
 }
+
+@keyframes gradientAnimation {
+    0% { background: #ffffff; } /* Hồng đậm */
+    50% { background: #ffcdf4; } /* Trắng */
+    100% { background: #ffc0cb; } /* Hồng nhạt */
+}
+
+body {
+    animation: gradientAnimation 5s infinite alternate ease-in-out;
+    transition: background 1s;
+}
