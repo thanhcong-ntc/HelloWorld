@@ -1,0 +1,58 @@
+@keyframes gentle-bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-30px); } /* Nảy nhẹ lên */
+    60% { transform: translateY(0); }
+    80% { transform: translateY(-10px); } /* Nhún nhẹ */
+    100% { transform: translateY(0); }
+}
+
+@keyframes soft-glow {
+    0% { text-shadow: 0px 0px 5px rgba(255, 105, 180, 0.5); }
+    50% { text-shadow: 0px 0px 10px rgba(255, 105, 180, 0.7); }
+    100% { text-shadow: 0px 0px 5px rgba(255, 105, 180, 0.5); }
+}
+
+@keyframes slow-bg {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+body {
+    background: linear-gradient(45deg, #ffdde1, #fad0c4, #fbc2eb);
+    background-size: 400% 400%;
+    animation: slow-bg 10s infinite alternate ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+#bouncing-text {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ff69b4;
+    font-family: 'Pacifico', cursive;
+    animation: gentle-bounce 3s infinite ease-in-out, soft-glow 3s infinite alternate;
+}
+
+#music-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#music-button:hover {
+    background-color: #ff1493;
+}
